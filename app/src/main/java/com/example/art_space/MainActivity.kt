@@ -81,11 +81,10 @@ fun Greeting(modifier: Modifier = Modifier) {
             text = stringResource(R.string.description),
             modifier = modifier,
         )
-        Row(modifier = modifier) {
+        Row(modifier = modifier.width(2000.dp), horizontalArrangement = Arrangement.SpaceBetween) {
             Button(onClick = { result = (1..6).random() }) {
                 Text(stringResource(R.string.previous))
             }
-            Spacer(modifier = Modifier.width(130.dp))
             Button(onClick = { result = (1..6).random() }) {
                 Text(stringResource(R.string.next))
             }
